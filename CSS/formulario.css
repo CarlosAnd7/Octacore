@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+*{
+  font-family: 'Comfortaa', cursive;
+}
+input{
+  border-radius: 20px;
+  width: 75%;
+  text-align: center;
+}
+
+h1{
+  font-size: 2em;
+}
+.button{
+  width: 120%;
+  height: auto;
+}
+.visualizar{
+  display: inline-block;
+  width: 90%;
+  height: auto;
+  float: left;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 70px 0px 0px 0px;
+}
+
+.botones{
+  margin-top:10%;
+  display: inline-block;
+  width: 20%;
+  height: auto;
+  text-align: center;
+  padding: 48px 0px;
+}
+
+.btnAbajo{
+  margin-left:45%;
+  margin-right:45%;
+  float: left;
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
