@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+*{
+  font-family: 'Comfortaa', cursive;
+}
+h1{
+  font-size: 2em;
+}
+h3{
+  font-size: 2em;
+  padding: 0% 0% 0% 5%;
+  text-align: center;
+}
+h6{
+  text-align: center;
+  font-size: 12px;
+}
+.visualizar{
+  display: inline-block;
+  width: 80%;
+  height: auto;
+  float: left;
+  text-align: center;
+  padding: 0% 0% 0% 0%;
+}
+.botones{
+  margin-top:5%;
+  display: inline-block;
+  width: 20%;
+  height: auto;
+  text-align: center;
+  padding: 0% 5% 0% 5%;
+}
+body{
+  background-image: url("./IMG/Fondo.png");
+  background-color: #0410F1;
+}

@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+*{
+  font-family: 'Comfortaa', cursive;
+}
+html,body{
+  background-image: url("../IMG/Fondo3.png");
+  background: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+  background-size: 100% 100%;
+}
+h6{
+  color: #020412;
+  font-size: 39px;
+  text-shadow: 2px 2px 8px #77F8F4;
+}
+.busqueda{
+  border-radius: 20px;
+  width: 75%;
+  text-align: center;
+}
