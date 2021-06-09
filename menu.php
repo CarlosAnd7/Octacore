@@ -1,5 +1,5 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-<link href="CSS/fondo.css" rel="stylesheet" type="text/css">
+<link href="CSS/menu.css" rel="stylesheet" type="text/css">
 <body>
   <main class="container d-flex align-items-center justify-content-center vh-80 vw-100">
   <div class="row">
@@ -19,7 +19,6 @@
         <form action="./Capital.php">
           <input type="image" name="" src="./IMG/dollar.png">
         </form>
-
           <h6>Capital</h6>
       </div>
 </div>

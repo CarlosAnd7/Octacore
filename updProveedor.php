@@ -15,44 +15,53 @@
     <h1>Actualizar Proveedor</h1>
 </head>
 <body>
+<form action="./cUpdProveedor.php" method="POST">
   <div class="visualizar">
     <table class="table table-borderless table-responsive">
     <thead class="table-dark">
 
     </thead>
     <tbody>
+      <?php
+      $id = $_POST["id"][0];
+      $nombreProveedor = $_POST["nombreProveedor"][0];
+      $telefono = $_POST["telefono"][0];
+      $direccion = $_POST["direccion"][0];
+      $correo = $_POST["correo"][0];
+      $empresa = $_POST["empresa"][0];
+      
+      $proveedor[]= $id;
+      $proveedor[]= $nombreProveedor;
+      $proveedor[]= $telefono;
+      $proveedor[]= $direccion;
+      $proveedor[]= $correo;
+      $proveedor[]= $empresa;
+      ?>
+
+      <input type="hidden" name="Proveedores" value="<?php echo $proveedor ?>">
       <tr>
         <th scope="row">ID Proveedor</th>
-        <td colspan="2"><input list="Proveedores" name="myBrowser" /></label>
-          <datalist id="Proveedores">
-          <option value="Proveedor1">
-          <option value="Proveedor2">
-          <option value="Proveedor3">
-          <option value="Proveedor4">
-          <option value="Proveedor5">
-          <option value="Proveedor6">
-          </input></td>
+        <td colspan="2"><input readonly name="id" value="<?php echo $id ?>" placeholder="<?php echo $id ?>">  </td>
       </tr>
       <tr>
         <th scope="row">Nombre Completo</th>
-        <td colspan="2"> <input>    </input></td>
+        <td colspan="2"> <input name="nombreProveedor" value="<?php echo $nombreProveedor ?>" placeholder="<?php echo $nombreProveedor ?>">  </td>
       </tr>
       <tr>
         <th scope="row">Telefono</th>
-        <td colspan="2"> <input type="tel">    </input></td>
+        <td colspan="2"> <input type="tel" name="telefono" value="<?php echo $telefono ?>" placeholder="<?php echo $telefono ?>">  </td>
       </tr>
       <tr>
         <th scope="row">Dirección</th>
-        <td colspan="2"><input>    </input></td>
+        <td colspan="2"><input name="direccion" value="<?php echo $direccion ?>" placeholder="<?php echo $direccion ?>">  </td>
       </tr>
       <tr>
         <th scope="row">Empresa</th>
-        <td colspan="2"><input>    </input></td>
+        <td colspan="2"><input name="empresa" value="<?php echo $empresa ?>" placeholder="<?php echo $empresa ?>">  </td>
       </tr>
       <tr>
         <th scope="row">Correo Electrónico</th>
-        <td colspan="2"><input type="email">    </input></td>
-      </tr>
+        <td colspan="2"><input type="email" name="correo" value="<?php echo $correo ?>" placeholder="<?php echo $correo ?>">  </td>
       </tr>
     </tbody>
   </table>
@@ -60,5 +69,6 @@
   <div class="btnAbajo">
     <input class="btnAbajo" type="image" name="" value="" src="./IMG/ok.png"></input>
   </div>
+  </form>
 </body>
 </html>

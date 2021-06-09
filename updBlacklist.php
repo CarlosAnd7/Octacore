@@ -5,17 +5,17 @@
 <head>
   <nav class="navbar">
     <div class="position-absolute top-0 end-0 ">
-      <form class="d-flex"action="./Cliente.php">
+      <form class="d-flex"action="./Blacklist.php">
         <input class="button" type="image" src="./IMG/atras.png" height="40">
       </form>
     </div>
   </nav>
     <meta charset="utf-8">
-    <title>Actualizar Cliente</title>
-    <h1>Actualizar Cliente</h1>
+    <title>Actualizar Blacklist</title>
+    <h1>Actualizar Blacklist</h1>
 </head>
 <body>
-  <form action="./cUpdCliente.php" method="POST">
+  <form action="cUpdBlacklist.php" method="POST">
     <div class="visualizar">
       <table class="table table-borderless table-responsive">
       <thead class="table-dark">
@@ -24,12 +24,13 @@
       <tbody>
         <?php
         $id = $_POST["id"][0];
+        $clienteID = $_POST["clienteID"][0];
         $nombreCompleto = $_POST["nombreCompleto"][0];
         $telefono = $_POST["telefono"][0];
         $direccion = $_POST["direccion"][0];
         $correo = $_POST["correo"][0];
         
-        $cliente[]= $id;
+        $cliente[]= $clienteID;
         $cliente[]= $nombreCompleto;
         $cliente[]= $telefono;
         $cliente[]= $direccion;
@@ -37,9 +38,10 @@
         ?>
         
         <input type="hidden" name="Clientes" value="<?php echo $cliente ?>">
+        <input type="hidden" name="id" value="<?php echo $id ?>">
         <tr>
           <th scope="row">ID Cliente</th>
-          <td colspan="2"><input readonly name="id" value="<?php echo $id ?>" placeholder="<?php echo $id ?>">  </td>
+          <td colspan="2"><input readonly name="clienteID" value="<?php echo $clienteID==null? "No aplica":$clienteID; ?>">  </td>
         </tr>
 
         <tr>

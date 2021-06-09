@@ -15,40 +15,54 @@
     <h1>Actualizar Producto</h1>
 </head>
 <body>
+<form action="./cUpdProducto.php" method="POST">
   <div class="visualizar">
     <table class="table table-borderless table-responsive">
     <thead class="table-dark">
 
     </thead>
     <tbody>
+      <?php
+      $id = $_POST["id"][0];
+      $numPiezas = $_POST["numPiezas"][0];
+      $nombre = $_POST["nombre"][0];
+      $descripcion = $_POST["descripcion"][0];
+      $precio = $_POST["precio"][0];
+      $proveedorID = $_POST["proveedorID"][0];
+      
+      $producto[]= $id;
+      $producto[]= $numPiezas;
+      $producto[]= $nombre;
+      $producto[]= $descripcion;
+      $producto[]= $precio;
+      $producto[]= $proveedorID;
+      ?>
+
+      <input type="hidden" name="Productos" value="<?php echo $producto ?>">
       <tr>
         <th scope="row">ID Producto</th>
-        <td colspan="2"><input list="Producto" name="myBrowser" /></label>
-          <datalist id="Producto">
-          <option value="Producto1">
-          <option value="Producto2">
-          <option value="Producto3">
-          <option value="Producto4">
-          <option value="Producto5">
-          <option value="Producto6">
-          </input></td>
+        <td colspan="2"><input readonly name="id" value="<?php echo $id ?>" placeholder="<?php echo $id ?>"> </td>
       </tr>
       <tr>
-        <th scope="row">Numero Piezas</th>
-        <td colspan="2"> <input >    </input></td>
+        <th scope="row">N&uacute;mero Piezas</th>
+        <td colspan="2"><input name="numPiezas" value="<?php echo $numPiezas ?>" placeholder="<?php echo $numPiezas ?>"> </td>
       </tr>
       <tr>
         <th scope="row">Nombre de Pieza</th>
-        <td colspan="2"><input>    </input></td>
+        <td colspan="2"><input name="nombre" value="<?php echo $nombre ?>" placeholder="<?php echo $nombre ?>"></td>
       </tr>
       <tr>
         <th scope="row">Descripcion</th>
-        <td colspan="2"><input>    </input></td>
+        <td colspan="2"><input name="descripcion" value="<?php echo $descripcion ?>" placeholder="<?php echo $descripcion ?>"></td>
       </tr>
       <tr>
         <th scope="row">Precio</th>
-        <td colspan="2"><input>    </input></td>
+        <td colspan="2"><input name="precio" value="<?php echo $precio ?>" placeholder="<?php echo $precio ?>"></td>
       </tr>
+      <tr>
+      <!-- por ahora, no se puede modificar el ID proveedor -->
+        <th scope="row">ID Proveedor</th>
+        <td colspan="2"><input  readonly name="proveedorID" value="<?php echo $proveedorID ?>" placeholder="<?php echo $proveedorID ?>"></td>
       </tr>
     </tbody>
   </table>
@@ -56,5 +70,6 @@
   <div class="btnAbajo">
     <input class="btnAbajo" type="image" name="" value="" src="./IMG/ok.png"></input>
   </div>
+</form>
 </body>
 </html>
